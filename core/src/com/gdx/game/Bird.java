@@ -9,9 +9,9 @@ import com.badlogic.gdx.math.Vector2;
 import java.util.Random;
 
 public class Bird {
-    private static final int UP = 6;
+    private static final int UP = 8;
     private Texture birdImage;
-    private Vector2 position;
+    Vector2 position;
     private float vy;
     private float gravity;
 
@@ -34,5 +34,11 @@ public class Bird {
 
         vy += gravity;
         position.y += vy;
+    }
+
+    public void reCreate() {
+        position = position = new Vector2(new Random().nextInt(150),
+                new Random().nextInt(300) );
+        vy = 0;
     }
 }
