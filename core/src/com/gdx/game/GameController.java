@@ -9,6 +9,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 // TODO: Count score
 // TODO: Refactor code
+// TODO: Add music
+// TODO: Fix collisions
 
 public class GameController extends ApplicationAdapter {
 	private static final int RESTART_IMAGE_X_COORDINATE = 200;
@@ -71,7 +73,7 @@ public class GameController extends ApplicationAdapter {
 			gameOver = true;
 		}
 
-		if (Gdx.input.isKeyPressed(Input.Keys.SPACE) && gameOver) {
+		if (Gdx.input.isKeyPressed(Input.Keys.ENTER) && gameOver) {
 			reCreate();
 		}
 	}
