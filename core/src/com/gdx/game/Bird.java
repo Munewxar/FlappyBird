@@ -10,7 +10,6 @@ import java.util.Random;
 
 public class Bird {
     private static final int UP = 6;
-    private static final float GRAVITY = -0.5f;
     private Texture birdImage;
     private Vector2 position;
     private float vy;
@@ -21,7 +20,7 @@ public class Bird {
         position = new Vector2(new Random().nextInt(150),
                 new Random().nextInt(300) );
         vy = 0;
-        gravity = GRAVITY;
+        gravity = -0.5f;
     }
 
     public void draw(SpriteBatch spriteBatch) {
